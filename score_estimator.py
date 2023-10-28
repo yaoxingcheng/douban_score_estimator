@@ -42,7 +42,7 @@ def estimate_score(subject_id):
             score_dict[4] += len(soup.find_all("span", attrs={"class": "allstar40 rating"}))
             score_dict[5] += len(soup.find_all("span", attrs={"class": "allstar50 rating"}))
         except:
-            pass
+            break
     valid_num = score_dict[1] + score_dict[2] + score_dict[3] + score_dict[4] + score_dict[5]
     print("有效短评数量: ", valid_num)
     print("星星分布: ", score_dict)
